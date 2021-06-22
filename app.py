@@ -11,7 +11,7 @@ def predict_AQI(Average_Temperature,Maximum_Temperature,Minimum_Temperature,Atm_
  print(prediction)
  return prediction
 def main():
- st.title("Hyderabad AQI prediction")
+ st.title("AQI Prediction")
  html_temp = """
  <div style="background-color:green;padding:20px"\>
  <h2 style="color:white;text-align:center;">AQI prediction ML App </h2>
