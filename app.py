@@ -24,8 +24,22 @@ def main():
  Atm_pressure_at_sea_level = st.text_input("Atm_pressure_at_sea_level ",0)
  Average_wind_speed = st.text_input("Average_wind_speed",0)
  result=""
+ value="info"
  if st.button("Predict"):
  	result=predict_AQI(Average_Temperature,Maximum_Temperature,Minimum_Temperature,Atm_pressure_at_sea_level,Average_wind_speed)
+  if result[0] <= 50:
+   value="Good"
+  elif result[0] <= 100:
+   value="Moderate"
+  elif result[0] <= 150:
+   value="Unhealthy for Sensitive Groups"
+  elif result[0] <= 200:
+   value="Unhealthy"
+  elif result[0] <= 300:
+   value="Very Unhealthy"
+  else:
+   value="Hazardous"
+ st.info(value)
  st.success('The AQI is {}'.format(result))
  if st.button("About"):
  	st.text("Lets Learn")
