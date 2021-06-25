@@ -39,8 +39,8 @@ def main():
    value="Very Unhealthy"
   else:
    value="Hazardous"
- st.info(value)
  st.success('The AQI is {}'.format(result))
+ st.info(value)
  if st.button("About"):
  	st.text("Lets Learn")
  	st.text("Built with Streamlit")
