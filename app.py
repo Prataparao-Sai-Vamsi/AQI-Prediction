@@ -26,7 +26,7 @@ def main():
  result=""
  value="info"
  if st.button("Predict"):
- 	result=predict_AQI(Average_Temperature,Maximum_Temperature,Minimum_Temperature,Atm_pressure_at_sea_level,Average_wind_speed)
+  result=predict_AQI(Average_Temperature,Maximum_Temperature,Minimum_Temperature,Atm_pressure_at_sea_level,Average_wind_speed)
   if result[0] <= 50:
    value="Good"
   elif result[0] <= 100:
